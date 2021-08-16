@@ -21,6 +21,9 @@ from game_api import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('games/', views.GameListCreateView.as_view(), name="games"),
+    path('game/<int:id>/', views.GameRetrieveUpdateDestroyView.as_view(), name="game"),
     path('studios/', views.StudioListCreateView.as_view(), name="studios"),
-    path('platforms/', views.PlatformListCreateView.as_view(), name="platforms")
+    path('studio/<int:id>/', views.StudioRetrieveUpdateDestroyView.as_view(), name="studio"),
+    path('platforms/', views.PlatformListCreateView.as_view(), name="platforms"),
+    path('platform/<int:id>/', views.PlatformRetrieveUpdateDestroyView.as_view(), name="platform")
 ]
