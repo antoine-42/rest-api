@@ -17,13 +17,10 @@ class PlatformSerializer(serializers.ModelSerializer):
 
 class GameSerializer(serializers.ModelSerializer):
     studio = serializers.SlugRelatedField(
-        queryset=Studio.objects.all(),
-        slug_field='name'
+        queryset=Studio.objects.all(), slug_field="name"
     )
     platforms = serializers.SlugRelatedField(
-        queryset=Platform.objects.all(),
-        many=True,
-        slug_field='name'
+        queryset=Platform.objects.all(), many=True, slug_field="name"
     )
 
     class Meta:
