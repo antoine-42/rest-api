@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  game_api:
+    image: game_api:latest
+    container_name: game_api
+    hostname: game_api
+    ports:
+      - "8008:8000"
